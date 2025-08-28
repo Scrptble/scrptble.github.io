@@ -1,26 +1,45 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+// NOTE: Prisma was removed because @prisma/client was not installed and no schema exists.
+// This placeholder simply validates input and (optionally) could be extended to call
+// an external service (email API, form backend, etc.).
+
+type ContactPayload = {
+  name?: string;
+  email?: string;
+  subject?: string;
+  message?: string;
+};
 
 export async function POST(req: NextRequest) {
-  const data = await req.json();
-
   try {
-    await prisma.contact.create({
-      data: {
-        name: data.name,
-        email: data.email,
-        subject: data.subject,
-        message: data.message,
-      },
+    const data: ContactPayload = await req.json();
+    const { name, email, subject, message } = data;
+
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { success: false, error: 'name, email and message are required' },
+        { status: 400 }
+      );
+    }
+
+    // Placeholder persistence: log to server console (visible in deployed logs if supported)
+    console.log('Contact submission', {
+      name,
+      email,
+      subject: subject || '',
+      message,
+      ts: new Date().toISOString(),
     });
+
+    // In production, replace the above with one of:
+    // - Call a serverless email API (e.g., SendGrid, Resend, Postmark)
+    // - Forward to a form handling service (e.g., Formspree)
+    // - Persist via an external DB API endpoint you control
+
     return NextResponse.json({ success: true });
   } catch (error) {
-    let message = 'An unknown error occurred';
-    if (error instanceof Error) {
-      message = error.message;
-    }
+    const message = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json({ success: false, error: message }, { status: 500 });
   }
 }
