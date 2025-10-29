@@ -1,52 +1,47 @@
-# SCRPTBLE Website
+# Lume Studio - Next.js Template
 
-This is the official website for SCRPTBLE, built with Next.js and Tailwind CSS.
+This project is a Next.js template built with TypeScript, designed for creating stunning websites with smooth animations and modern UI components.
 
-## Development
+## Getting Started
 
-To run the development server:
+1.  **Install dependencies:**
 
-```bash
-npm install
-npm run dev
-```
+    ```bash
+    pnpm install
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  **Run the development server:**
+
+    ```bash
+    pnpm dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Deployment
 
-This website is automatically deployed to GitHub Pages when changes are pushed to the main branch. The deployment process is handled by GitHub Actions.
+### Cloudflare Pages
 
-### Manual Deployment
+If you intend to deploy this project using Cloudflare Pages, please use the `cf-pages` branch. This branch contains configurations optimized for Cloudflare Pages deployment.
 
-To manually deploy the website:
+## Key Components
 
-1. Build the project:
-```bash
-npm run build
-```
+### ScrollView Component [`src/components/scroll-view.tsx`](src/components/scroll-view.tsx)
 
-2. The built files will be in the `out` directory, which can be deployed to any static hosting service.
+The `ScrollView` component is a utility component that triggers animations when an element becomes visible in the viewport. It's designed to enhance user experience by adding engaging visual effects as users scroll through the page.
 
 ## Technologies Used
 
-- Next.js
-- React
-- Tailwind CSS
-- Framer Motion
-- TypeScript
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [pnpm](https://pnpm.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Motion.dev](https://motion.dev/)
 
-## Project Structure
+## License
 
-- `/app` - Next.js app directory containing pages and components
-- `/public` - Static assets like images
-- `/components` - Reusable React components
-- `/styles` - Global styles and Tailwind configuration
+MIT
 
-## Contributing
+## Full version
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request 
+For the full version, go to https://lume.kohi.studio/full-version
