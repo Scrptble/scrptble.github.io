@@ -70,12 +70,14 @@ export function Cursor({
   const cursorYSpring = useSpring(cursorY, springConfig || { duration: 0 });
 
   useEffect(() => {
+    if (!attachToParent) return;
+    
     const handleVisibilityChange = (visible: boolean) => {
       setIsVisible(visible);
     };
 
     const currentCursor = cursorRef.current;
-    if (attachToParent && currentCursor) {
+    if (currentCursor) {
       const parent = currentCursor.parentElement;
       if (parent) {
         const handleMouseEnter = () => {
