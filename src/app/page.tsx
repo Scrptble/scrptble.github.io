@@ -5,6 +5,9 @@ import PortfolioSection from "@/components/sections/home/portfolio-section";
 import ServicesSection from "@/components/sections/home/services";
 import ServicesSection2 from "@/components/sections/home/services-2";
 import StatsSection from "@/components/sections/home/stats";
+import ShopifyAppsSection from "@/components/sections/home/shopify-apps-section";
+import ClientAppsSection from "@/components/sections/home/client-apps-section";
+import PartnersSection from "@/components/sections/home/partners-section";
 import Testimonials from "@/components/testimonials";
 import FooterSection from "@/components/footer";
 import ContactSection from "@/components/contact";
@@ -14,6 +17,9 @@ export default function Home() {
     <main className="min-h-screen">
       <HeroSection />
       <AboutUsSection />
+      <PartnersSection />
+      <ShopifyAppsSection />
+      <ClientAppsSection />
       {/* <ServicesSection /> */}
       <ServicesSection2 />
       <PortfolioSection />
