@@ -10,7 +10,7 @@ import {
 import useMeasure from "react-use-measure";
 
 const TRANSITION = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 280,
   damping: 18,
   mass: 0.3,
@@ -66,7 +66,7 @@ function Number({ mv, number }: { mv: MotionValue<number>; number: number }) {
       style={{ y }}
       layoutId={`${uniqueId}-${number}`}
       className="absolute inset-0 flex items-center justify-center"
-      transition={TRANSITION}
+      transition={TRANSITION as any}
       ref={ref}
     >
       {number}

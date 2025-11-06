@@ -74,8 +74,9 @@ export function Cursor({
       setIsVisible(visible);
     };
 
-    if (attachToParent && cursorRef.current) {
-      const parent = cursorRef.current.parentElement;
+    const currentCursor = cursorRef.current;
+    if (attachToParent && currentCursor) {
+      const parent = currentCursor.parentElement;
       if (parent) {
         const handleMouseEnter = () => {
           parent.style.cursor = "none";
