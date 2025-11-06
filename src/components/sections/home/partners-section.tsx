@@ -324,7 +324,7 @@ export default function PartnersSection() {
                 as="p"
                 className="text-lg text-muted-foreground mb-8"
               >
-                Ready to work with certified experts? Let's build something amazing together.
+                Ready to work with certified experts? Let&apos;s build something amazing together.
               </TextEffect>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

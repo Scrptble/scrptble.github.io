@@ -173,7 +173,7 @@ export default function ShopifyAppsSection() {
               as="p"
               className="text-lg text-muted-foreground mb-8"
             >
-              Ready to build your own Shopify app? Let's discuss your project.
+              Ready to build your own Shopify app? Let&apos;s discuss your project.
             </TextEffect>
             <Button asChild size="lg">
               <Link href="#contact">

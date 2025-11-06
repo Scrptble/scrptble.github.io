@@ -74,7 +74,7 @@ export default function ClientAppsSection() {
               as="p"
               className="text-lg text-muted-foreground max-w-3xl mx-auto"
             >
-              Explore the custom Shopify applications we've built for our clients, 
+              Explore the custom Shopify applications we&apos;ve built for our clients, 
               now available to the entire Shopify community.
             </TextEffect>
           </div>
