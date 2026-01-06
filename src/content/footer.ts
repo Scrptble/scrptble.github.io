@@ -23,4 +23,12 @@ export const FOOTER_LINKS = [
     title: "Testimonials",
     href: "#testimonials",
   },
+  {
+    title: "Terms",
+    href: "/terms",
+  },
+  {
+    title: "Privacy",
+    href: "/privacy",
+  },
 ];
